@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Horror Survivor Recap</h1>
+    <h2>{{horror_season}}</h2>
+
+    <h2>Predictions</h2>
+    <ul>
+        {% for prediction in predictions %}
+            <li>{{prediction}}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Sole Survivor Prediction: Amanada Young</p>
+
+    <hr>
+    <!--Episode I start-->
+    <h2>Episode I</h2>
+
+    <h2>Tribes</h2>
+
+    {% for tribe_name, tribe_members in starting_tribes.items() %}
+        {{tribe_name}}
+        <ul>
+            {% for member in tribe_members %}
+                <li>{{member}}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <h2>Shelter Building</h2>
+    {% for tribe_name, events in shelter_events.items()%}
+        <h2>{{tribe_name}}</h2>
+        <ul>
+            {% for event in events %}
+                <li>{{event}}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <h2>Alliance Formation</h2>
+    {% for tribe_name, alliances in starting_alliances.items()%}
+    <h2>{{tribe_name}}</h2>
+        <ul>
+            {% for alliance in alliances %}
+                <li>{{alliance}}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <h2>{{immunity_challenges.keys() | list | first}}</h2>
+    <h3>{{immunity_challenges.values() | list | first | first}}</h3>
+    <ul>
+        {% set challenge = immunity_challenges.values() | list | first %}
+        {% for events in challenge[1:] %}
+            <li>{{ events }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[0]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode II start-->
+    <h2>Episode II</h2>
+
+    {% set keys = immunity_challenges.keys() | list %}
+    <h2>{{keys[1]}}</h2>
+
+    {% set challenge = immunity_challenges.values() | list %}
+    <h3>{{challenge[1][0]}}</h3>
+    <ul>
+        {% for event in challenge[1][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[1]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode III start-->
+    <h2>Episode III</h2>
+
+    <h2>{{keys[2]}}</h2>
+
+    <h3>{{challenge[2][0]}}</h3>
+    <ul>
+        {% for event in challenge[2][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[2]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode IV start-->
+    <h2>Episode IV</h2>
+
+    <h2>{{keys[3]}}</h2>
+
+    <h3>{{challenge[3][0]}}</h3>
+    <ul>
+        {% for event in challenge[3][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[3]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode V start-->
+    <h2>Episode V</h2>
+
+    <h2>{{keys[4]}}</h2>
+
+    <h3>{{challenge[4][0]}}</h3>
+    <ul>
+        {% for event in challenge[4][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[4]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode VI start-->
+    <h2>Episode VI</h2>
+
+    <h2>{{keys[5]}}</h2>
+
+    <h3>{{challenge[5][0]}}</h3>
+    <ul>
+        {% for event in challenge[5][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[5]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode VII start-->
+    <h2>Episode VII</h2>
+
+    <h2>{{keys[6]}}</h2>
+
+    <h3>{{challenge[6][0]}}</h3>
+    <ul>
+        {% for event in challenge[6][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[6]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode VIII start-->
+    <h2>Episode VIII</h2>
+
+    <h2>{{keys[7]}}</h2>
+
+    <h3>{{challenge[7][0]}}</h3>
+    <ul>
+        {% for event in challenge[7][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[7]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode IX start-->
+    <h2>Episode IX</h2>
+
+    <h2>{{keys[8]}}</h2>
+
+    <h3>{{challenge[8][0]}}</h3>
+    <ul>
+        {% for event in challenge[8][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[8]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode X start-->
+    <h2>Episode X</h2>
+
+    <h2>{{keys[9]}}</h2>
+
+    <h3>{{challenge[9][0]}}</h3>
+    <ul>
+        {% for event in challenge[9][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[9]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode XI start-->
+    <h2>Episode XI</h2>
+
+    <h2>{{keys[10]}}</h2>
+
+    <h3>{{challenge[10][0]}}</h3>
+    <ul>
+        {% for event in challenge[10][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[10]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode XII start-->
+    <h2>Episode XII</h2>
+
+    <h2>{{keys[11]}}</h2>
+
+    <h3>{{challenge[11][0]}}</h3>
+    <ul>
+        {% for event in challenge[11][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[11]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode XIII start-->
+    <h2>Episode XIII</h2>
+
+    <h2>{{keys[12]}}</h2>
+
+    <h3>{{challenge[12][0]}}</h3>
+    <ul>
+        {% for event in challenge[12][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[12]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode XIV start-->
+    <h2>Episode XIV</h2>
+
+    <h2>{{keys[13]}}</h2>
+
+    <h3>{{challenge[13][0]}}</h3>
+    <ul>
+        {% for event in challenge[13][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[13]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode XV start-->
+    <h2>Episode XV</h2>
+
+    <h2>{{keys[14]}}</h2>
+
+    <h3>{{challenge[14][0]}}</h3>
+    <ul>
+        {% for event in challenge[14][1:] %}
+            <li>{{ event }}</li>
+        {% endfor %}
+    </ul>
+    <h3>{{immunity_challenge_winners[14]}} wins immunity</h3>
+
+    <hr>
+    <!--Episode XVI start-->
+    <h2>Episode XVI</h2>
+</body>
+</html>
