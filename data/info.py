@@ -129,7 +129,7 @@ immunity_challenges = {
         "Michael Myers excels due to his inability to experience fear"
     ],
     "Immunity Challenge XV": [
-        "Players must stand on a pole in the ocean until they fall. Players are tempted with 3 rounds of food french fries and beer, pizza, and oreos with peanut butter.",
+        "Players must stand on a pole in the ocean until they fall. Players are tempted with 3 rounds of food: french fries and beer, pizza, and oreos with peanut butter.",
         "Michael Myers excels due to his lack of emotion"
     ]
 }
@@ -151,3 +151,144 @@ immunity_challenge_winners = [
     "Michael Myers",
     "Michael Myers"
 ]
+
+tribal_councils = {
+    "Tribal Council I": [
+        "Paimon Tribe",
+        "Paimon unanimously votes out the dad from Get Out"
+        ],
+    "Tribal Council II": [
+        "Bughuul Tribe",
+        "Tom Savini, and Patrick Bateman maintain a strong alliance",
+        "Black Phillip reveals himself as the devil and forms an alliance with Carrie and Angela"
+    ],
+    "Tribal Council III": [
+        "Paimon Tribe",
+        "Jon Voight leads a charge to get rid of Devon Sawa from Idle Hands",
+        "Tiffany reveals to Carrie and Angela that she has an immunity idol",
+        "The tribe splits their votes between Devon Sawa and Leprechaun, with more votes towards Leprechaun as Devon Sawa did well during the obstacle course immunity challenge in Episode I"
+    ],
+    "Tribal Council IV": [
+        "Bughuul Tribe",
+        "The alliance of Carrie, Angela, Black Phillip, and Tiffany remain strong, and want to vote out Tom Savini or Patrick Bateman",
+        "Tom and Patrick try to flip the vote around on Regan"
+    ],
+    "Tribal Council V": [
+        "Bughuul Tribe",
+        "Tiffany talks to Tom Savini and hatches a plan to bring in Michael Myers and Regan to vote out Black Phillip",
+        "Carrie and Angela don’t make any moves"
+    ],
+    "Tribal Council VI": [
+        "Bughuul Tribe",
+        "Angela and Carrie are mad at Tiffany for voting out Black Phillip and shattering their alliance",
+        "Tiffany plays her immunity idol",
+        "Regan is caught in the voting crossfire"
+    ],
+    "Tribal Council VII": [
+        "Paimon Tribe",
+        "The tribe is aware merge must be coming soon so they focus on eliminating challenge beasts",
+        "Gabriel is targeted due to his physical agility"
+    ],
+    "Tribal Council VIII": [
+        "Bughuul Tribe",
+        "Carrie and Angela try to convince Michael to vote for Tiffany"
+    ],
+    "Tribal Council IX": [
+        "Arawak Tribe",
+        "Devon Sawa is targeted for being annoying"
+    ],
+    "Tribal Council X": [
+        "Arawak Tribe",
+        "The tribe members decide to take advantage of the opportunity to vote out challenge beast"
+    ],
+    "Tribal Council XI": [
+        "Arawak Tribe",
+        "The players take the opportunity to try to break up the Mommas Boy's alliance",
+        "Carrie and Angela are worried about the Alpha Males, but decide to help break up the Mommas Boy's",
+        "Players split their vote between Pamela Voorhees and Leatherface with the extra vote going to Pamela"
+    ],
+    "Tribal Council XII": [
+        "Arawak Tribe",
+        "Norman and Leatherface are shaken up by the loss of Pamela Voorhees",
+        "Carrie and Angela go to Norman and Leatherface and tell them it was Jon Voight and Tom Savini that orchestrated voting out Pamela",
+        "They split the votes between Tom Savini and Jon Voight",
+        "Jon Voight plays his immunity idol"
+    ],
+    "Tribal Council XIII": [
+        "Arawak Tribe",
+        "Players take the opportunity to vote out Jon Voight because a lot of his former allies make up the jury"
+    ],
+    "Tribal Council XIV": [
+        "Arawak Tribe",
+        "Michael Myers is the swing vote between the Angela/Carrie and Norman/Leatherface alliances",
+        "Michael views Leatherface and Norman as more of a threat than Angela and Carrie and sides with them",
+        "Players target Norman Bates as he is the better talker and could prove to be a jury threat"
+    ],
+    "Tribal Council XV": [
+        "Arawak Tribe",
+        "Michael decides that leatherface has a strong jury chance, so he decides to take angela with him, assuming Carrie would be better at firemaking",
+        "Leatherface and Carrie to compete in firemaking",
+        "Carrie beats Leatherface in firemaking"
+    ],
+}
+
+tribal_vote_outs = [
+    "The Dad From Get Out",
+    "Mrs. Loomis",
+    "Leprechaun",
+    "Patrick Bateman",
+    "Black Phillip",
+    "Possessed Regan (Pazuzu)",
+    "Gabriel",
+    "Tiffany Valentine",
+    "Devon Sawa",
+    "Amanda Young",
+    "Pamela Voorhees",
+    "Tom Savini",
+    "Jon Voight (from Anaconda)",
+    "Norman Bates"
+]
+
+reward_challenge = {
+    "reward_challenge_1": [
+        "Each tribe must complete a rescue mission to save a stranded member who is hanging from a parachute in a tree on an island. The first tribe to swim to the island, secure the member on a stretcher, and return to the finish line wins a fire-making kit.",
+        "Black Phillip sits out for Bughuul tribe",
+        "Bughuul must rescue Tiffany",
+        "Paimon must rescue Norman Bates",
+        "Patrick is distracted by how gross the jungle is",
+        "Jon Voight is at home during the challenge",
+        "Gabriel parkours through the jungle",
+    ],
+    "reward_challenge_2": [
+        "Each tribe must use rope, a hammer, and nails to reinforce a wooden box in order to make it as hard to open as possible. The tribes then swap and race to be the first to open their opponents boxes to win the prize inside. The first tribe to successfully open the box wins tarp, pillows, and hammocks for their camp.",
+        "Amanda and Jon Voight construct a difficult to open box"
+    ],
+    "reward_challenge_3": [
+        "Tribes must build a jungle outhouse sponsored by S-Mart featuring guest judge Ash Williams",
+        "Amanda Young uses her knowledge gained from John Kramer to lead Paimon Tribe to victory"
+    ]
+}
+
+reward_winners = [
+    "Paimon Tribe wins the firemaking supplies",
+    "Paimon Tribe wins and obtains camp advantage",
+    "Paimon Tribe wins a hammer, nails, a saw, and rope"
+]
+
+random_events = [
+        "Tiffany finds an immunity idle and keeps it a secret",
+        "There is a bad thunderstorm, and Bughuul Tribe is badly affected due to their poorly constructed camp",
+        "Pamela Voorhees finds a steal-a-vote which is valid until merge",
+        "Jon Voight finds an immunity idol",
+        "Jon Voight sprains his ankle, hindering his performance"
+    ]
+
+final_votes = {
+    "Devon Sawa": "Michael Myers",
+    "Amanda Young": "Angela Baker",
+    "Norman Bates": "Carrie White",
+    "Tom Savini": "Michael Myers",
+    "Jon Voight": "Michael Myers",
+    "Leatherface": "Michael Myers",
+    "Pamela Voorhees": "Angela Baker"
+}
