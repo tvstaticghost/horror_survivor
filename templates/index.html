@@ -63,6 +63,17 @@
     </ul>
     <h3>{{immunity_challenge_winners[0]}} wins immunity</h3>
 
+    {% set councils = tribal_councils.keys() | list %}
+    {% set council_events = tribal_councils.values() | list %}
+
+    <h2>{{councils[0]}} - {{council_events[0][0]}}</h2>
+
+    <ul>
+        {% for event in council_events[0][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode II start-->
     <h2>Episode II</h2>
@@ -79,9 +90,18 @@
     </ul>
     <h3>{{immunity_challenge_winners[1]}} wins immunity</h3>
 
+    <h2>{{councils[1]}} - {{council_events[1][0]}}</h2>
+    <ul>
+        {% for event in council_events[1][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode III start-->
     <h2>Episode III</h2>
+
+    <h3>Random Event: {{random_events[0]}}</h3>
 
     <h2>{{keys[2]}}</h2>
 
@@ -92,6 +112,13 @@
         {% endfor %}
     </ul>
     <h3>{{immunity_challenge_winners[2]}} wins immunity</h3>
+
+    <h2>{{councils[2]}} - {{council_events[2][0]}}</h2>
+    <ul>
+        {% for event in council_events[2][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
 
     <hr>
     <!--Episode IV start-->
@@ -107,6 +134,13 @@
     </ul>
     <h3>{{immunity_challenge_winners[3]}} wins immunity</h3>
 
+    <h2>{{councils[3]}} - {{council_events[3][0]}}</h2>
+    <ul>
+        {% for event in council_events[3][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode V start-->
     <h2>Episode V</h2>
@@ -121,9 +155,18 @@
     </ul>
     <h3>{{immunity_challenge_winners[4]}} wins immunity</h3>
 
+    <h2>{{councils[4]}} - {{council_events[4][0]}}</h2>
+    <ul>
+        {% for event in council_events[4][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode VI start-->
     <h2>Episode VI</h2>
+
+    <h3>Random Event: {{random_events[1]}}</h3>
 
     <h2>{{keys[5]}}</h2>
 
@@ -135,9 +178,18 @@
     </ul>
     <h3>{{immunity_challenge_winners[5]}} wins immunity</h3>
 
+    <h2>{{councils[5]}} - {{council_events[5][0]}}</h2>
+    <ul>
+        {% for event in council_events[5][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode VII start-->
     <h2>Episode VII</h2>
+
+    <h3>Random Event: {{random_events[2]}}</h3>
 
     <h2>{{keys[6]}}</h2>
 
@@ -148,6 +200,13 @@
         {% endfor %}
     </ul>
     <h3>{{immunity_challenge_winners[6]}} wins immunity</h3>
+
+    <h2>{{councils[6]}} - {{council_events[6][0]}}</h2>
+    <ul>
+        {% for event in council_events[6][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
 
     <hr>
     <!--Episode VIII start-->
@@ -163,6 +222,13 @@
     </ul>
     <h3>{{immunity_challenge_winners[7]}} wins immunity</h3>
 
+    <h2>{{councils[7]}} - {{council_events[7][0]}}</h2>
+    <ul>
+        {% for event in council_events[7][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode IX start-->
     <h2>Episode IX</h2>
@@ -176,6 +242,13 @@
         {% endfor %}
     </ul>
     <h3>{{immunity_challenge_winners[8]}} wins immunity</h3>
+
+    <h2>{{councils[8]}} - {{council_events[8][0]}}</h2>
+    <ul>
+        {% for event in council_events[8][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
 
     <hr>
     <!--Episode X start-->
@@ -191,9 +264,18 @@
     </ul>
     <h3>{{immunity_challenge_winners[9]}} wins immunity</h3>
 
+    <h2>{{councils[9]}} - {{council_events[9][0]}}</h2>
+    <ul>
+        {% for event in council_events[9][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode XI start-->
     <h2>Episode XI</h2>
+
+    <h3>Random Event: {{random_events[3]}}</h3>
 
     <h2>{{keys[10]}}</h2>
 
@@ -204,6 +286,13 @@
         {% endfor %}
     </ul>
     <h3>{{immunity_challenge_winners[10]}} wins immunity</h3>
+
+    <h2>{{councils[10]}} - {{council_events[10][0]}}</h2>
+    <ul>
+        {% for event in council_events[10][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
 
     <hr>
     <!--Episode XII start-->
@@ -219,9 +308,18 @@
     </ul>
     <h3>{{immunity_challenge_winners[11]}} wins immunity</h3>
 
+    <h2>{{councils[11]}} - {{council_events[11][0]}}</h2>
+    <ul>
+        {% for event in council_events[11][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode XIII start-->
     <h2>Episode XIII</h2>
+
+    <h3>Random Event: {{random_events[4]}}</h3>
 
     <h2>{{keys[12]}}</h2>
 
@@ -232,6 +330,13 @@
         {% endfor %}
     </ul>
     <h3>{{immunity_challenge_winners[12]}} wins immunity</h3>
+
+    <h2>{{councils[12]}} - {{council_events[12][0]}}</h2>
+    <ul>
+        {% for event in council_events[12][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
 
     <hr>
     <!--Episode XIV start-->
@@ -247,6 +352,13 @@
     </ul>
     <h3>{{immunity_challenge_winners[13]}} wins immunity</h3>
 
+    <h2>{{councils[13]}} - {{council_events[13][0]}}</h2>
+    <ul>
+        {% for event in council_events[13][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
     <!--Episode XV start-->
     <h2>Episode XV</h2>
@@ -261,8 +373,34 @@
     </ul>
     <h3>{{immunity_challenge_winners[14]}} wins immunity</h3>
 
+    <h2>{{councils[14]}} - {{council_events[14][0]}}</h2>
+    <ul>
+        {% for event in council_events[14][1:] %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+
     <hr>
-    <!--Episode XVI start-->
-    <h2>Episode XVI</h2>
+    <!--Final Tribal-->
+    <h2>Final Tribal</h2>
+    <h2>The Final Three</h2>
+    <ul>
+        <li>Michael Myers</li>
+        <li>Carrie White</li>
+        <li>Angela Baker</li>
+    </ul>
+
+    <details>
+        <summary>Voting Distribution</summary>
+        <ul>
+            {% for vote in final_votes.items() | list%}
+                <li>{{vote[0]}} -> {{vote[1]}}</li>
+            {% endfor %}
+        </ul>
+    </details>
+
+    <h2>Sole Survivor of Horror Survivor Season I: Michael Myers</h2>
+
+    <h3>Sia Money goes to Carrie White</h3>
 </body>
 </html>
