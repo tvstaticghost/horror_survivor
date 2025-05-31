@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="..//static/css/index.css">
 </head>
 <body>
     <h1>Horror Survivor Recap</h1>
@@ -20,365 +21,278 @@
 
     <hr>
     <!--Episode I start-->
-    <h2>Episode I</h2>
+    {% set episode_number = "Episode I" %}
+    {% include "components/episode.html" %}
 
-    <h2>Tribes</h2>
+    {% set tribes = starting_tribes %}
+    {% set heading = "Starting Tribes" %}
+    {% include "components/tribe_list.html" %}
 
-    {% for tribe_name, tribe_members in starting_tribes.items() %}
-        {{tribe_name}}
-        <ul>
-            {% for member in tribe_members %}
-                <li>{{member}}</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
+    {% set heading = "Shelter Building" %}
+    {% set shelter = shelter_events %}
+    {% include "components/shelter_building.html" %}
 
-    <h2>Shelter Building</h2>
-    {% for tribe_name, events in shelter_events.items()%}
-        <h2>{{tribe_name}}</h2>
-        <ul>
-            {% for event in events %}
-                <li>{{event}}</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
+    {% set alliance = starting_alliances %}
+    {% set heading = "Alliance Formation" %}
+    {% include "components/alliance.html" %}
 
-    <h2>Alliance Formation</h2>
-    {% for tribe_name, alliances in starting_alliances.items()%}
-    <h2>{{tribe_name}}</h2>
-        <ul>
-            {% for alliance in alliances %}
-                <li>{{alliance}}</li>
-            {% endfor %}
-        </ul>
-    {% endfor %}
+    {% set immunity_keys = immunity_challenges.keys() | list %}
+    {% set immunity_values = immunity_challenges.values() | list | first %}
 
-    <h2>{{immunity_challenges.keys() | list | first}}</h2>
-    <h3>{{immunity_challenges.values() | list | first | first}}</h3>
-    <ul>
-        {% set challenge = immunity_challenges.values() | list | first %}
-        {% for events in challenge[1:] %}
-            <li>{{ events }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[0]}} wins immunity</h3>
+    {% set heading = immunity_keys[0] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[0] %}
+    {% include "components/immunity.html" %}
 
     {% set councils = tribal_councils.keys() | list %}
     {% set council_events = tribal_councils.values() | list %}
 
-    <h2>{{councils[0]}} - {{council_events[0][0]}}</h2>
-
-    <ul>
-        {% for event in council_events[0][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[0] %}
+    {% set council_desc = council_events[0][0] %}
+    {% set council_details = council_events[0][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode II start-->
-    <h2>Episode II</h2>
+    {% set episode_number = "Episode II" %}
+    {% include "components/episode.html" %}
 
-    {% set keys = immunity_challenges.keys() | list %}
-    <h2>{{keys[1]}}</h2>
+    {% set heading = immunity_keys[1] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[1] %}
+    {% include "components/immunity.html" %}
 
-    {% set challenge = immunity_challenges.values() | list %}
-    <h3>{{challenge[1][0]}}</h3>
-    <ul>
-        {% for event in challenge[1][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[1]}} wins immunity</h3>
-
-    <h2>{{councils[1]}} - {{council_events[1][0]}}</h2>
-    <ul>
-        {% for event in council_events[1][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[1] %}
+    {% set council_desc = council_events[1][0] %}
+    {% set council_details = council_events[1][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode III start-->
-    <h2>Episode III</h2>
+    {% set episode_number = "Episode III" %}
+    {% include "components/episode.html" %}
 
     <h3>Random Event: {{random_events[0]}}</h3>
 
-    <h2>{{keys[2]}}</h2>
+    {% set heading = immunity_keys[2] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[2] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[2][0]}}</h3>
-    <ul>
-        {% for event in challenge[2][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[2]}} wins immunity</h3>
-
-    <h2>{{councils[2]}} - {{council_events[2][0]}}</h2>
-    <ul>
-        {% for event in council_events[2][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[2] %}
+    {% set council_desc = council_events[2][0] %}
+    {% set council_details = council_events[2][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode IV start-->
-    <h2>Episode IV</h2>
+    {% set episode_number = "Episode IV" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[3]}}</h2>
+    {% set heading = immunity_keys[3] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[3] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[3][0]}}</h3>
-    <ul>
-        {% for event in challenge[3][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[3]}} wins immunity</h3>
-
-    <h2>{{councils[3]}} - {{council_events[3][0]}}</h2>
-    <ul>
-        {% for event in council_events[3][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[3] %}
+    {% set council_desc = council_events[3][0] %}
+    {% set council_details = council_events[3][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode V start-->
-    <h2>Episode V</h2>
+    {% set episode_number = "Episode V" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[4]}}</h2>
+    {% set heading = immunity_keys[4] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[4] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[4][0]}}</h3>
-    <ul>
-        {% for event in challenge[4][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[4]}} wins immunity</h3>
-
-    <h2>{{councils[4]}} - {{council_events[4][0]}}</h2>
-    <ul>
-        {% for event in council_events[4][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[4] %}
+    {% set council_desc = council_events[4][0] %}
+    {% set council_details = council_events[4][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode VI start-->
-    <h2>Episode VI</h2>
+    {% set episode_number = "Episode VI" %}
+    {% include "components/episode.html" %}
 
     <h3>Random Event: {{random_events[1]}}</h3>
 
-    <h2>{{keys[5]}}</h2>
+    {% set heading = immunity_keys[5] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[5] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[5][0]}}</h3>
-    <ul>
-        {% for event in challenge[5][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[5]}} wins immunity</h3>
+    {% set council_number = councils[5] %}
+    {% set council_desc = council_events[5][0] %}
+    {% set council_details = council_events[5][1:] %}
+    {% include "components/council.html" %}
 
-    <h2>{{councils[5]}} - {{council_events[5][0]}}</h2>
-    <ul>
-        {% for event in council_events[5][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    <hr>
+    <!--Recap-->
+    <h2>Recap</h2>
+
+    {% set tribes = recap_tribes %}
+    {% set heading = "Tribes" %}
+    {% include "components/tribe_list.html" %}
+
+    {% set alliance = recap_alliances %}
+    {% set heading = "Alliances" %}
+    {% include "components/alliance.html" %}
 
     <hr>
     <!--Episode VII start-->
-    <h2>Episode VII</h2>
+    {% set episode_number = "Episode VII" %}
+    {% include "components/episode.html" %}
 
     <h3>Random Event: {{random_events[2]}}</h3>
 
-    <h2>{{keys[6]}}</h2>
+    {% set heading = immunity_keys[6] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[6] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[6][0]}}</h3>
-    <ul>
-        {% for event in challenge[6][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[6]}} wins immunity</h3>
-
-    <h2>{{councils[6]}} - {{council_events[6][0]}}</h2>
-    <ul>
-        {% for event in council_events[6][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[6] %}
+    {% set council_desc = council_events[6][0] %}
+    {% set council_details = council_events[6][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode VIII start-->
-    <h2>Episode VIII</h2>
+    {% set episode_number = "Episode VIII" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[7]}}</h2>
+    {% set heading = immunity_keys[7] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[7] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[7][0]}}</h3>
-    <ul>
-        {% for event in challenge[7][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[7]}} wins immunity</h3>
-
-    <h2>{{councils[7]}} - {{council_events[7][0]}}</h2>
-    <ul>
-        {% for event in council_events[7][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[7] %}
+    {% set council_desc = council_events[7][0] %}
+    {% set council_details = council_events[7][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode IX start-->
-    <h2>Episode IX</h2>
+    {% set episode_number = "Episode IX" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[8]}}</h2>
+    <h2>MERGE</h2>
 
-    <h3>{{challenge[8][0]}}</h3>
-    <ul>
-        {% for event in challenge[8][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[8]}} wins immunity</h3>
+    {% set tribes = merge_tribes %}
+    {% set heading = "New Tribe" %}
+    {% include "components/tribe_list.html" %}
 
-    <h2>{{councils[8]}} - {{council_events[8][0]}}</h2>
-    <ul>
-        {% for event in council_events[8][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set alliance = merge_alliances %}
+    {% set heading = "Alliances" %}
+    {% include "components/alliance.html" %}
+
+    {% set heading = immunity_keys[8] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[8] %}
+    {% include "components/immunity.html" %}
+
+    {% set council_number = councils[8] %}
+    {% set council_desc = council_events[8][0] %}
+    {% set council_details = council_events[8][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode X start-->
-    <h2>Episode X</h2>
+    {% set episode_number = "Episode X" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[9]}}</h2>
+    {% set heading = immunity_keys[9] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[9] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[9][0]}}</h3>
-    <ul>
-        {% for event in challenge[9][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[9]}} wins immunity</h3>
-
-    <h2>{{councils[9]}} - {{council_events[9][0]}}</h2>
-    <ul>
-        {% for event in council_events[9][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[9] %}
+    {% set council_desc = council_events[9][0] %}
+    {% set council_details = council_events[9][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode XI start-->
-    <h2>Episode XI</h2>
+    {% set episode_number = "Episode XI" %}
+    {% include "components/episode.html" %}
 
     <h3>Random Event: {{random_events[3]}}</h3>
 
-    <h2>{{keys[10]}}</h2>
+    {% set heading = immunity_keys[10] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[10] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[10][0]}}</h3>
-    <ul>
-        {% for event in challenge[10][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[10]}} wins immunity</h3>
-
-    <h2>{{councils[10]}} - {{council_events[10][0]}}</h2>
-    <ul>
-        {% for event in council_events[10][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[10] %}
+    {% set council_desc = council_events[10][0] %}
+    {% set council_details = council_events[10][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode XII start-->
-    <h2>Episode XII</h2>
+    {% set episode_number = "Episode XII" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[11]}}</h2>
+    {% set heading = immunity_keys[11] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[11] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[11][0]}}</h3>
-    <ul>
-        {% for event in challenge[11][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[11]}} wins immunity</h3>
-
-    <h2>{{councils[11]}} - {{council_events[11][0]}}</h2>
-    <ul>
-        {% for event in council_events[11][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[11] %}
+    {% set council_desc = council_events[11][0] %}
+    {% set council_details = council_events[11][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode XIII start-->
-    <h2>Episode XIII</h2>
+    {% set episode_number = "Episode XIII" %}
+    {% include "components/episode.html" %}
 
     <h3>Random Event: {{random_events[4]}}</h3>
 
-    <h2>{{keys[12]}}</h2>
+    {% set heading = immunity_keys[12] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[12] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[12][0]}}</h3>
-    <ul>
-        {% for event in challenge[12][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[12]}} wins immunity</h3>
-
-    <h2>{{councils[12]}} - {{council_events[12][0]}}</h2>
-    <ul>
-        {% for event in council_events[12][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[12] %}
+    {% set council_desc = council_events[12][0] %}
+    {% set council_details = council_events[12][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode XIV start-->
-    <h2>Episode XIV</h2>
+    {% set episode_number = "Episode XIV" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[13]}}</h2>
+    {% set heading = immunity_keys[13] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[13] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[13][0]}}</h3>
-    <ul>
-        {% for event in challenge[13][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[13]}} wins immunity</h3>
-
-    <h2>{{councils[13]}} - {{council_events[13][0]}}</h2>
-    <ul>
-        {% for event in council_events[13][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[13] %}
+    {% set council_desc = council_events[13][0] %}
+    {% set council_details = council_events[13][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Episode XV start-->
-    <h2>Episode XV</h2>
+    {% set episode_number = "Episode XV" %}
+    {% include "components/episode.html" %}
 
-    <h2>{{keys[14]}}</h2>
+    {% set heading = immunity_keys[14] %}
+    {% set challenges = immunity_challenges[heading] %}
+    {% set winner = immunity_challenge_winners[14] %}
+    {% include "components/immunity.html" %}
 
-    <h3>{{challenge[14][0]}}</h3>
-    <ul>
-        {% for event in challenge[14][1:] %}
-            <li>{{ event }}</li>
-        {% endfor %}
-    </ul>
-    <h3>{{immunity_challenge_winners[14]}} wins immunity</h3>
-
-    <h2>{{councils[14]}} - {{council_events[14][0]}}</h2>
-    <ul>
-        {% for event in council_events[14][1:] %}
-            <li>{{event}}</li>
-        {% endfor %}
-    </ul>
+    {% set council_number = councils[14] %}
+    {% set council_desc = council_events[14][0] %}
+    {% set council_details = council_events[14][1:] %}
+    {% include "components/council.html" %}
 
     <hr>
     <!--Final Tribal-->

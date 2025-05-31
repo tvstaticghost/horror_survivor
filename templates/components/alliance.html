@@ -1,0 +1,11 @@
+{% if heading %}
+    <h2>{{heading}}</h2>
+{% endif %}
+    {% for tribe, alliances in alliance.items() %}
+        <h3>{{tribe}}</h3>
+        <ul>
+            {% for alliance in alliances %}
+                <li>{{alliance}}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}

@@ -1,3 +1,4 @@
+
 horror_survivor_season = "Horror Survivor: Season I"
 
 starting_tribes = {
@@ -12,6 +13,30 @@ starting_tribes = {
             "Pamela Voorhees", "The dad from Get Out"
         ]
 }
+
+recap_tribes = {
+    "Bughuul Tribe": [
+        "Angela Baker", "Michael Myers", "Carrie White", "Tom Savini (in Dawn of the Dead)",
+        "Tiffany Valentine"
+    ],
+    "Paimon Tribe": [
+        "Leatherface", "Jon Voight (in Anaconda)", "Norman Bates", "Gabriel", "Devon Sawa (in Idle Hands)",
+        "Amanda Young", "Pamela Voorhees"
+    ]
+}
+
+merge_tribes = {
+    "Arawak Tribe": [
+        "Pamela Voorhees", "Norman Bates", "Michael Myers", "Amanda Young", "Tom Savini (in Dawn of the Dead)",
+        "Leatherface", "Carrie White", "Angela Baker", "Devon Sawa (in Idle Hands)", "Jon Voight (in Anaconda)"
+    ]
+}
+
+merge_info = [
+    "Pamela’s steal-a-vote expires unused",
+    "Tribe members voted out will go to Ponderosa instead of going home",
+    "New Tribe name: Arawak Tribe"
+]
 
 predictions = [
         "Amanda Young - Gets \"island hot\"",
@@ -42,6 +67,24 @@ starting_alliances = {
         "Pamela Voorhees, Leatherface, and Norman Bates - The Momma's Boys",
         "Gabriel, Jon Voight, and Amanda Young",
         "No one likes the dad from Get Out"
+    ]
+}
+
+recap_alliances = {
+    "Bughuul Tribe": [
+        "Angela and Carrie",
+        "Tiffany and Tom Savini",
+        "Michael Myers is playing the middle"
+    ],
+    "Paimon Tribe": [
+        "No strong alliances but Devon Sawa is on the outs"
+    ]
+}
+
+merge_alliances = {
+    "Arawak Tribe": [
+        "Pamela, Leatherface, and Norman Bates - “The Momma’s Boys”",
+        "Tom Savini and Jon Voight - “The Alpha Males”"
     ]
 }
 

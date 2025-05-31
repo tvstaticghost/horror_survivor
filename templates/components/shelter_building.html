@@ -1,0 +1,11 @@
+{% if heading %}
+    <h2>{{heading}}</h2>
+{% endif %}
+{% for tribe_name, events in shelter.items() %}
+    <h3>{{tribe_name}}</h3>
+    <ul>
+        {% for event in events %}
+            <li>{{event}}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}

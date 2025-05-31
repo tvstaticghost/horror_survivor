@@ -1,0 +1,15 @@
+{% if heading %}
+    <h2>{{ heading }}</h2>
+{% endif %}
+
+<h3 class="challenge-desc">{{ challenges[0] }}</h3>
+
+<ul>
+    {% for event in challenges[1:] %}
+        <li>{{ event }}</li>
+    {% endfor %}
+</ul>
+
+{% if winner %}
+    <h3>{{ winner }} wins immunity</h3>
+{% endif %}

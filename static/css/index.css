@@ -1,0 +1,14 @@
+@import "home.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background-color: #121212;
+    --surface-color: #1E1E1E;
+    --accent-color: #1E88E5;
+    --primary-text: #e0e0e0;
+}

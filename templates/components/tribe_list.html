@@ -1,0 +1,12 @@
+{% if heading %}
+    <h2>{{ heading }}</h2>
+{% endif %}
+
+{% for tribe_name, tribe_members in tribes.items() %}
+    <h3>{{ tribe_name }}</h3>
+    <ul class="tribe-list">
+        {% for member in tribe_members %}
+            <li>{{ member }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
